@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nelo-reservation-app"
+version = "0.1.0"
+description = "Nelo restaurant test app"
+authors = ["Issam Z"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+sqlalchemy = "^2.0.31"
+pytest = "^8.3.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+pyright = "^1.1.367"
+ruff = "^0.4.9"
+pytest = "*"
+pytest-mock = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
