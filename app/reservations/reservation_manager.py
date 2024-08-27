@@ -1,6 +1,9 @@
 from fastapi import HTTPException
-from ..app.api.requests import AvailableReservationRequest, ReservationRequest
-from ..models.db import DietaryRestriction, Diner, Reservation, Restaurant, RestaurantTable, diner_dietary_restriction_association, restaurant_dietary_restriction_association
+from ..api.requests import AvailableReservationRequest, ReservationRequest
+from ..models.db import (
+    DietaryRestriction, Diner, Reservation, Restaurant, RestaurantTable, 
+    diner_dietary_restriction_association, restaurant_dietary_restriction_association
+)
 from sqlalchemy.orm.session import Session
 from datetime import timedelta
 from typing import List

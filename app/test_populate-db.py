@@ -1,6 +1,8 @@
-from models.db import DietaryRestriction
+from typing import List
+from app.models.db import DietaryRestriction
 from populate_db import PopulateData
 from common.tests.db_setup import test_session
+
 
 
 class TestPopulateDatabase:

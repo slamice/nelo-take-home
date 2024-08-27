@@ -1,11 +1,11 @@
 from fastapi import HTTPException
-from api.requests import AvailableReservationRequest, ReservationRequest
-from models.db import DietaryRestriction, Diner, Reservation, Restaurant, RestaurantTable
-from src.reservation_manager import ReservationManager
+from app.api.requests import AvailableReservationRequest, ReservationRequest
+from app.models.db import DietaryRestriction, Diner, Reservation, Restaurant, RestaurantTable
+from .reservation_manager import ReservationManager
 from common.tests.db_setup import test_session
 from typing import List
 from datetime import datetime, timedelta
-from common.tests.test_data import GenerateTestData
+
 from populate_db import PopulateData
 import pytest
 

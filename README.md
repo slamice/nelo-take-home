@@ -8,6 +8,7 @@ poetry install
 First populate data. It's stored in a few csvs. Se are using sqlite for a database.
 
 ```
+cd app
 python3 populate_db.py
 ```
 
@@ -48,8 +49,8 @@ These script examples also exist in the **scripts** folder.
 FastApi automatically generates docs under `http://localhost:8000/docs`
 
 **Some Minor Notes:**
-- I'd like to do some clean up for the test classes and session creating
 - There is some more cleanup for basic things
   - Linting using `ruff`, better logging, etc.
   - Haven't used `sqlAlchemy` in a long time, some clean up there
+  - Test data generation shoudl be unified and cleaned up
 - An agreement on the API contract would be nice

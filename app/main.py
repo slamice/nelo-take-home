@@ -1,9 +1,9 @@
 from fastapi import FastAPI, status, HTTPException
 
 from .models.db import live_session
-from .app.api.requests import ReservationRequest, AvailableReservationRequest
-from .app.api.responses import RestaurantResponse, ReservationResponse
-from .src.reservation_manager import ReservationManager
+from .api.requests import ReservationRequest, AvailableReservationRequest
+from .api.responses import RestaurantResponse, ReservationResponse
+from .reservations.reservation_manager import ReservationManager
 from typing import List
 
 
