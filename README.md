@@ -11,15 +11,13 @@ First populate data. It's stored in a few csvs. Se are using sqlite for a databa
 python3 populate_db.py
 ```
 
-Start the server, it's in fast api:
+Start the server, it's in FastAPI:
 
 ```
 fastapi dev main.py
 ```
 
-Now we can run our queries:
-
-Find a reservation given some diners:
+Now we can run our endpoints. Find a reservation given some diners:
 ```
 curl -X POST "http://127.0.0.1:8000/find_reservation/" \
 -H "Content-Type: application/json" \
@@ -47,9 +45,11 @@ curl -X DELETE "http://127.0.0.1:8000/reservation/1" -H "Content-Type: applicati
 
 These script examples also exist in the **scripts** folder.
 
-FastApi automatically generates docs [here](http://localhost:8000/docs)
+FastApi automatically generates docs under `http://localhost:8000/docs`
 
-**Notes:**
+**Some Minor Notes:**
 - I'd like to do some clean up for the test classes and session creating
-- There is some more cleanup for basic things (linting using `ruff`, better logging)
-- An agreement on the API contract would be nice to make more 
+- There is some more cleanup for basic things
+  - Linting using `ruff`, better logging, etc.
+  - Haven't used `sqlAlchemy` in a long time, some clean up there
+- An agreement on the API contract would be nice
